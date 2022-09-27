@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body style="font-family: verdana; font-size: 14px;">
+	<h3> Gyarados </h3>
+		<!-- lol kill me -->
+
+	<span class="gyarados">
+		<button id="hp_down" onclick="document.getElementById('hp').value = parseInt(document.getElementById('hp').value) - 1;parseHTML(false)"> - </button>
+		<input id="hp" type="text" placeholder="HP" size=4 value=168 onchange="parseHTML(false)"> 
+		<button id="hp_up" onclick="document.getElementById('hp').value = parseInt(document.getElementById('hp').value) + 1;parseHTML(false)"> + </button> <br>
+		<br> 
+		<input style="text-align: center" type="text" id="level" value="52" size=1 />
+		<input type="text" placeholder="Attack" size=4/>  
+		<input type="text" placeholder="Defense" size=4/>  
+		<input type="text" placeholder="Sp.Atk" size=4/>  
+		<input type="text" placeholder="Sp.Def" size=4/>  
+		<input type="text" placeholder="Speed" size=4/>  
+		<button onclick=parseHTML(true)> Calculate IVs </button>
+		<p id="flail"> </p>
+<!-- 
+		<select name="positive">
+			<option> Neutral </option>
+			<option> Attack </option>
+			<option> Defense </option>
+			<option> Sp.Atk </option>
+			<option> Sp.Def </option>
+			<option> Speed </option>
+		</select>
+		<select name="positive">
+			<option> Neutral </option>
+			<option> Attack </option>
+			<option> Defense </option>
+			<option> Sp.Atk </option>
+			<option> Sp.Def </option>
+			<option> Speed </option>
+		</select>
+ -->
+		<p id="results"> </p>
+	</span>
+	<br>
+
+	<b> Red fight </b> <br> <br>
+
+	<span class="red">
+		<input id="gyara_hp" type="text" placeholder="Gyarados HP" size=8/> 
+		<input id="gyara_max_hp" type="text" placeholder="Gyarados max HP" size=8/> 
+		<input id="snorlax_hp" type="text" placeholder="Snorlax HP" size=8/> 
+		<input id="snorlax_def" type="text" placeholder="Snorlax Defense" size=12/>  
+		<input id="snorlax_spdef" type="text" placeholder="Snorlax Sp.Def" size=12/>  
+	</span>
+	<button onclick=red()> Calculate </button>
+	<br> 
+	<p id="red_strats"> </p>
+
+	<script type="text/javascript" src="index.js"></script>
+</body>
+</html>
