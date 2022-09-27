@@ -119,10 +119,10 @@ function liveTB(hp, spdef) {
 	else if (hp == 232) {
 		return spdef >= 110
 	}
-	else if (hp == 233) {
+	else if (hp >= 233 && hp <= 234) {
 		return spdef >= 109
 	}
-	else if (hp == 235) {
+	else if (hp >= 235) {
 		return spdef >= 108
 	}
 	return false
