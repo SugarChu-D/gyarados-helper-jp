@@ -125,10 +125,10 @@ function liveTB(hp, spdef) {
 }
 
 function leadSnorlax(hp, def) {
-	if (hp >= 200 && hp <= 222) {
+	if (hp >= 220 && hp <= 222) {
 		return def >= 87
 	}
-	else if (hp == 223 || hp == 224) {
+	else if (hp >= 223 && hp <= 224) {
 		return def >= 86
 	}
 	else if (hp >= 225 && hp <= 227) {
@@ -140,7 +140,7 @@ function leadSnorlax(hp, def) {
 	else if (hp >= 231 && hp <= 233) {
 		return def >= 83
 	}
-	else if (hp == 234) {
+	else if (hp >= 234) {
 		return def >= 82
 	}
 	return false
@@ -189,6 +189,7 @@ function red() {
 	var snorlaxSpdef = parseInt(document.getElementById("snorlax_spdef").value)
 
 	var goodDef = leadSnorlax(snorlaxHP, snorlaxDef)
+	console.log(goodDef)
 	var case3 = Math.floor(gyaraHP / 3.0) + Math.floor(snorlaxHP / 3.0) >= 141
 	var case4 = Math.floor(gyaraMaxHP / 3.0) + Math.floor(snorlaxHP / 3.0) >= 157
 	var case5 = Math.floor(gyaraMaxHP / 6.0) + Math.floor(2*snorlaxHP / 3.0) >= 186
