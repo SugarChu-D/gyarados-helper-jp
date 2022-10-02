@@ -1,7 +1,3 @@
-// Stat = floor(floor((2 * B + I + E) * L / 100 + 5) * N)
-
-// Math.floor()
-
 var stats = {
 	cyndaquil: [39, 52, 43, 60, 50, 65],
 	magikarp: [20, 10, 55, 15, 20, 80],
@@ -129,16 +125,19 @@ function liveTB(hp, spdef) {
 }
 
 function leadSnorlax(hp, def) {
-	if (hp == 223) {
+	if (hp >= 200 && hp <= 222) {
+		return def >= 87
+	}
+	else if (hp == 223 || hp == 224) {
 		return def >= 86
 	}
-	else if (hp == 225) {
+	else if (hp >= 225 && hp <= 227) {
 		return def >= 85
 	}
-	else if (hp == 228) {
+	else if (hp >= 228 && hp <= 230) {
 		return def >= 84
 	}
-	else if (hp == 231) {
+	else if (hp >= 231 && hp <= 233) {
 		return def >= 83
 	}
 	else if (hp == 234) {
