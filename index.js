@@ -214,9 +214,9 @@ function red() {
 			else if (!case4) {
 				if (case3) {
 					output += "Lead Snorlax, switch to Gyarados </br>"
-					output += "Send out Sentret, Max Revive Gyarados </br"
+					output += "Send out Sentret, Max Revive Gyarados </br>"
 					output += "Send out Gyarados, switch to Quilava </br>"
-					output += "Send out Snorlax, Giga Imact </br>"
+					output += "Send out Snorlax, Giga Impact </br>"
 				}
 				else if (!case3) {
 					output += "Lead Snorlax, switch to Gyarados. </br>"
