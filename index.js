@@ -190,17 +190,24 @@ function red() {
 
 	var goodDef = leadSnorlax(snorlaxHP, snorlaxDef)
 	console.log(goodDef)
-	var case3 = Math.floor(gyaraHP / 3.0) + Math.floor(snorlaxHP / 3.0) >= 141
-	var case4 = Math.floor(gyaraMaxHP / 3.0) + Math.floor(snorlaxHP / 3.0) >= 157
-	var case5 = Math.floor(gyaraMaxHP / 6.0) + Math.floor(2*snorlaxHP / 3.0) >= 186
+	var case3 = Math.floor(gyaraHP / 3.0) + Math.floor(snorlaxHP / 3.0)
+	var case4 = Math.floor(gyaraMaxHP / 3.0) + Math.floor(snorlaxHP / 3.0)
+	var case5 = Math.floor(gyaraMaxHP / 6.0) + Math.floor(2*snorlaxHP / 3.0)
 
 	var isTroll = troll(snorlaxDef, snorlaxSpdef)
 
 	var output = ''
 
+
+	output += `Case 3: ${case3} (${case3 >= 141}), case 4: ${case4} (${case4 >= 157}), case 5: ${case5} (${case5 >= 186}) </br> </br>`
+
 	if (gyaraHP <= 80) {
 		output += "Heal Gyarados to 117+ </br> </br>"
 	}
+
+	case3 = case3 >= 141
+	case4 = case4 >= 157
+	case5 = case5 >= 186
 
 	if (liveTB(snorlaxHP, snorlaxSpdef)) {
 		if (goodDef) {
@@ -213,10 +220,16 @@ function red() {
 			}
 			else if (!case4) {
 				if (case3) {
-					output += "Lead Snorlax, switch to Gyarados </br>"
+					output += "RISKY STRAT: Lead Snorlax, switch to Gyarados </br>"
 					output += "Send out Sentret, Max Revive Gyarados </br>"
 					output += "Send out Gyarados, switch to Quilava </br>"
-					output += "Send out Snorlax, Giga Impact </br>"
+					output += "Send out Snorlax, Giga Impact </br> </br>"
+
+					output += "<b> SAFE STRAT: </b> Lead Snorlax, switch to Kenya </br>"
+					output += "Send out Snorlax, switch to Quilava </br>"
+					output += "Send out Snorlax, Revive Sentret </br>"
+					output += "Send out Sentret, Max Revive Snorlax </br>"
+					output += "Send out Snorlax, die, get Blastoise </br>"
 				}
 				else if (!case3) {
 					output += "Lead Snorlax, switch to Gyarados. </br>"
@@ -229,7 +242,7 @@ function red() {
 		else if (!goodDef) {
 			output += "Lead Gyarados, let it die, send out Snorlax </br> </br>"
 
-			output += "If Thunderbolt: </br>"
+			output += "<b> If Thunderbolt: </b> </br>"
 			if (case3) {
 				if (case4) {
 					output += "Switch to Kenya, send out Snorlax + Max Revive Gyarados </br>"
@@ -275,9 +288,13 @@ function red() {
 			}
 			output += "</br> </br>"
 
-			output += "If Volt Tackle: </br>"
+			output += "<b> If Volt Tackle: </b> </br>"
 			if (case3) {
 				if (!case4) {
+					output += "Switch to Kenya </br>"
+					output += "Send out Snorlax, switch to Quilava</br>"
+					output += "Send out Snorlax, Max Revive Gyarados, get Blastoise </br>"
+					output += "OR: </br>"
 					output += "Max Revive Gyarados </br>"
 					output += "Send out Gyarados + X Speed (if 21+/x/x) + Waterfall </br>"
 				}
