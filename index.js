@@ -313,7 +313,7 @@ function red() {
 	 			else {
 					output += "Max Revive Gyarados </br>"
 					output += "Send out Sentret, Max Revive Snorlax </br>"
-					output += "Gyara was too low HP: Send out Snorlax, switch to Quilava"
+					output += "Gyara was too low HP: Send out Snorlax, switch to Quilava </br>"
 					output += "Send out Snorlax, die, get Blastoise </br>"
 	 			}
 	 		}
