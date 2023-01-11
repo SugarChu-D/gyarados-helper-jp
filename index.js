@@ -20,7 +20,7 @@ var evs = {
 }
 
 function flailHP(hp) {
-	return `<b>200: </b> ${Math.floor(hp/32)} | <b>150:</b> ${Math.floor(hp*3/32)} | <b>100:</b> ${Math.floor(hp*13/64)} | <b> 80: </b> ${Math.floor(hp*11/32)}`
+	return `<b>200: </b> ${Math.floor(hp/32-0.01)} | <b>150:</b> ${Math.floor(hp*3/32 - 0.01)} | <b>100:</b> ${Math.floor(hp*13/64-0.01)} | <b> 80: </b> ${Math.floor(hp*11/32-0.01)}`
 }
 
 function parseStat(stat, base, level, nat, hp) {
