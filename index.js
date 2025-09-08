@@ -202,7 +202,7 @@ function red() {
 	output += `Case 3: ${case3} (${case3 >= 141}), case 4: ${case4} (${case4 >= 157}), case 5: ${case5} (${case5 >= 186}) </br> </br>`
 
 	if (gyaraHP <= 80) {
-		output += "Heal Gyarados to 117+ </br> </br>"
+		output += "ギャラドスのHPを117以上に回復してください </br> </br>"
 	}
 
 	case3 = case3 >= 141
@@ -212,109 +212,109 @@ function red() {
 	if (liveTB(snorlaxHP, snorlaxSpdef)) {
 		if (goodDef) {
 			if (case4) {
-				output += "Heal Gyarados to full </br>"
-				output += "Lead Snorlax, switch to Gyarados </br>" 
-				output += "Send out Snorlax, switch to Kenya </br>"
-				output += "Send out Snorlax, Max Revive Gyarados </br>"
-				output += "Die, get Blastoise </br>"
+				output += "ギャラドスを全快させる </br>"
+				output += "カビゴン先頭, ギャラドスに交代 </br>" 
+				output += "カビゴン死に出し, ひきゃくに交代 </br>"
+				output += "カビゴン死に出し, 塊@ギャラドス </br>"
+				output += "ピカチュウ相打ち カメックス対面 </br>"
 			}
 			else if (!case4) {
 				if (case3) {
-					output += "RISKY STRAT: Lead Snorlax, switch to Gyarados </br>"
-					output += "Send out Sentret, Max Revive Gyarados </br>"
-					output += "Send out Gyarados, switch to Quilava </br>"
-					output += "Send out Snorlax, Giga Impact </br> </br>"
+					output += "攻めチャート: カビゴン先頭, ギャラドスに交代 </br>"
+					output += "オタチ死に出し, 塊@ギャラドス </br>"
+					output += "ギャラドス死に出し, マグマラシに交代 </br>"
+					output += "カビゴン死に出し, ギガインパクト </br> </br>"
 
-					output += "<b> SAFE STRAT: </b> Lead Snorlax, switch to Kenya </br>"
-					output += "Send out Snorlax, switch to Quilava </br>"
-					output += "Send out Snorlax, Revive Sentret </br>"
-					output += "Send out Sentret, Max Revive Snorlax </br>"
-					output += "Send out Snorlax, die, get Blastoise </br>"
+					output += "<b> 安定チャート: </b> カビゴン先頭, ひきゃくに交代 </br>"
+					output += "カビゴン死に出し, マグマラシに交代 </br>"
+					output += "カビゴン死に出し, 欠片@オタチ </br>"
+					output += "オタチ死に出し, 塊@カビゴン </br>"
+					output += "カビゴン死に出し, ピカチュウ相打ち カメックス対面 </br>"
 				}
 				else if (!case3) {
-					output += "Lead Snorlax, switch to Gyarados. </br>"
-					output += "Send out Snorlax, Max Revive Gyarados </br>"
-					output += "Send out Sentret, Max Revive Snorlax </br>"
-					output += "Send out Snorlax. Die, get Blastoise </br>"
+					output += "カビゴン先頭, ギャラドスに交代. </br>"
+					output += "カビゴン死に出し, 塊@ギャラドス </br>"
+					output += "オタチ死に出し, 塊@カビゴン </br>"
+					output += "カビゴン死に出し. ピカチュウ相打ち カメックス対面 </br>"
 				}
 			}
 		}
 		else if (!goodDef) {
-			output += "Lead Gyarados, let it die, send out Snorlax </br> </br>"
+			output += "ギャラドス先頭, そのまま死ぬ, カビゴン死に出し </br> </br>"
 
-			output += "<b> If Thunderbolt: </b> </br>"
+			output += "<b> 10まんボルトを打ってきた場合: </b> </br>"
 			if (case3) {
 				if (case4) {
-					output += "Switch to Kenya, send out Snorlax + Max Revive Gyarados </br>"
-					output += "Send out Sentret, Max Revive Snorlax </br>"
-					output += "Send out Snorlax, die, get Blastoise </br>"
+					output += "ひきゃくに交代, カビゴン死に出し + 塊@ギャラドス </br>"
+					output += "オタチ死に出し, 塊@カビゴン </br>"
+					output += "カビゴン死に出し, ピカチュウ相打ち カメックス対面 </br>"
 				}
 				else if (!case4) {
 					if (isTroll) {
-						output += "Switch to Kenya, send out Snorlax + switch to Quilava </br>"
-						output += "Send out Snorlax + Max Revive Gyarados </br>"
-						output += "Send out Sentret + Max Revive Snorlax </br>"
-						output += "Send out Snorlax + die </br>"
+						output += "ひきゃくに交代, カビゴン死に出し + マグマラシに交代 </br>"
+						output += "カビゴン死に出し + 塊@ギャラドス </br>"
+						output += "オタチ死に出し + 塊@カビゴン </br>"
+						output += "カビゴン死に出し + ピカチュウ相打ち </br>"
 					}
 					else {
-						output += "Revive Gyarados </br>"
-						output += "Send out Sentret, Max Revive Snorlax </br>"
+						output += "欠片@ギャラドス </br>"
+						output += "オタチ死に出し, 塊@カビゴン </br>"
 						if (!case5) {
-							output += "Send out Snorlax, switch to Quilava </br>"
+							output += "カビゴン死に出し, マグマラシに交代 </br>"
 						}
-						output += "Send out Snorlax, switch to Gyarados </br>"
-						output += "Send out Snorlax, Crunch </br>"
-						output += "Max Revive Gyarados </br>"
+						output += "カビゴン死に出し, ギャラドスに交代 </br>"
+						output += "カビゴン死に出し, かみくだく </br>"
+						output += "塊@ギャラドス </br>"
 						}
 					}
 				}
 			else if (!case3) { 
 				if (isTroll) {
-					output += "Switch to Kenya, send out Snorlax + switch to Quilava </br>"
-					output += "Send out Snorlax + Max Revive Gyarados </br>"
-					output += "Send out Sentret + Max Revive Snorlax </br>"
-					output += "Send out Snorlax + die </br>"
+					output += "ひきゃくに交代, カビゴン死に出し + マグマラシに交代 </br>"
+					output += "カビゴン死に出し + 塊@ギャラドス </br>"
+					output += "オタチ死に出し + 塊@カビゴン </br>"
+					output += "カビゴン死に出し + die </br>"
 				}
 				else {
-					output += "Revive Gyarados </br>"
-					output += "Send out Sentret, Max Revive Snorlax </br>"
+					output += "欠片@ギャラドス </br>"
+					output += "オタチ死に出し, 塊@カビゴン </br>"
 					if (!case5) {
-							output += "Send out Snorlax, switch to Quilava </br>"
+							output += "カビゴン死に出し, マグマラシに交代 </br>"
 					}
-					output += "Send out Snorlax, switch to Gyarados </br>"
-					output += "Send out Snorlax, use Crunch </br>"
-					output += "Send out Sentret, Max Revive Gyarados </br>"
+					output += "カビゴン死に出し, ギャラドスに交代 </br>"
+					output += "カビゴン死に出し, かみくだく </br>"
+					output += "オタチ死に出し, 塊@ギャラドス </br>"
 				}
 			}
 			output += "</br> </br>"
 
-			output += "<b> If Volt Tackle: </b> </br>"
+			output += "<b> ボルテッカーを打ってきた場合 </b> </br>"
 			if (case3) {
 				if (!case4) {
-					output += "Switch to Kenya </br>"
-					output += "Send out Snorlax, switch to Quilava</br>"
-					output += "Send out Snorlax, Max Revive Gyarados, get Blastoise </br>"
-					output += "OR: </br>"
-					output += "Max Revive Gyarados </br>"
-					output += "Send out Gyarados + X Speed (if 21+/x/x) + Waterfall </br>"
+					output += "ひきゃくに交代 </br>"
+					output += "カビゴン死に出し, マグマラシに交代</br>"
+					output += "カビゴン死に出し, 塊@ギャラドス, カメックス対面 </br>"
+					output += "あるいは: </br>"
+					output += "塊@ギャラドス </br>"
+					output += "ギャラドス死に出し + スピーダー (21+/x/x) + たきのぼり </br>"
 				}
 				else if (case4) {
-					output += "Switch to Kenya, send out Snorlax + Max Revive Gyarados </br>"
-					output += "Send out Sentret, Max Revive Snorlax </br>"
-					output += "Send out Snorlax, die, get Blastoise </br>"
+					output += "ひきゃくに交代, カビゴン死に出し + 塊@ギャラドス </br>"
+					output += "オタチ死に出し, 塊@カビゴン </br>"
+					output += "カビゴン死に出し, ピカチュウ相打ち カメックス対面 </br>"
 				}
 			}
 	 		else if (!case3) {
 	 			if (gyaraHP >= 118 && goodHP(Math.floor(gyaraMaxHP/2), snorlaxHP)) {
-					output += "Max Revive Gyarados </br>"
-					output += "Send out Sentret, Max Revive Snorlax </br>"
-					output += "Send out Snorlax, die, get Blastoise </br>"
+					output += "塊@ギャラドス </br>"
+					output += "オタチ死に出し, 塊@カビゴン </br>"
+					output += "カビゴン死に出し, ピカチュウ相打ち カメックス対面 </br>"
 	 			}
 	 			else {
-					output += "Max Revive Gyarados </br>"
-					output += "Send out Sentret, Max Revive Snorlax </br>"
-					output += "Gyara was too low HP: Send out Snorlax, switch to Quilava </br>"
-					output += "Send out Snorlax, die, get Blastoise </br>"
+					output += "塊@ギャラドス </br>"
+					output += "オタチ死に出し, 塊@カビゴン </br>"
+					output += "ギャラドスのHPが低すぎる場合: カビゴン死に出し, マグマラシに交代 </br>"
+					output += "カビゴン死に出し, ピカチュウ相打ち カメックス対面 </br>"
 	 			}
 	 		}
 
@@ -322,10 +322,10 @@ function red() {
 
 	}
 	else {
-		output = "Snorlax can't live TB. </br>"
+		output = "カビゴンのDが低すぎて10万ボルトを耐えません. </br>"
 		if (!goodDef) {
-			output += "Snorlax has bad defense. Lead Gyarados, swap to Snorlax. </br>"
-			output += "Max Revive Snorlax + Giga Impact <br>"
+			output += "カビゴンのBが低い. ギャラドス先頭, カビゴン交代. </br>"
+			output += "塊@カビゴン + ギガインパクト <br>"
 		}
 
 	}

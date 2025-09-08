@@ -2,17 +2,14 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title></title>
+	<title>HGSS Glitchless Manipless RTA補助ツール</title>
 </head>
 <body style="font-family: verdana; font-size: 14px;">
-	<h3> Gyarados </h3>
+	<h1>HGSS Glitchless Manipless RTA補助ツール</h1>
+	<h3> ギャラドス個体値特定 </h3>
 		<!-- lol kill me -->
 
 	<span class="gyarados">
-		<button id="hp_down" onclick="document.getElementById('hp').value = parseInt(document.getElementById('hp').value) - 1;parseHTML(false)"> - </button>
-		<input id="hp" type="text" placeholder="HP" size=4 value=168 onchange="parseHTML(false)"> 
-		<button id="hp_up" onclick="document.getElementById('hp').value = parseInt(document.getElementById('hp').value) + 1;parseHTML(false)"> + </button> <br>
-		<br> 
 		<input style="text-align: center" type="text" id="level" value="52" size=1 />
 		<input type="text" placeholder="Attack" size=4/>  
 		<input type="text" placeholder="Defense" size=4/>  
@@ -20,6 +17,10 @@
 		<input type="text" placeholder="Sp.Def" size=4/>  
 		<input type="text" placeholder="Speed" size=4/>  
 		<button onclick=parseHTML(true)> Calculate IVs </button>
+		<h3> じたばた計算 </h3>
+		<button id="hp_down" onclick="document.getElementById('hp').value = parseInt(document.getElementById('hp').value) - 1;parseHTML(false)"> - </button>
+		<input id="hp" type="text" placeholder="HP" size=4 value=168 onchange="parseHTML(false)"> 
+		<button id="hp_up" onclick="document.getElementById('hp').value = parseInt(document.getElementById('hp').value) + 1;parseHTML(false)"> + </button>
 		<p id="flail"> </p>
 <!-- 
 		<select name="positive">
@@ -43,16 +44,16 @@
 	</span>
 	<br>
 
-	<b> Red fight </b> <br> <br>
+	<h3> レッド戦 </h3> 
 
 	<span class="red">
-		<input id="gyara_hp" type="text" placeholder="Gyarados HP" size=8/> 
-		<input id="gyara_max_hp" type="text" placeholder="Gyarados max HP" size=8/> 
-		<input id="snorlax_hp" type="text" placeholder="Snorlax HP" size=8/> 
-		<input id="snorlax_def" type="text" placeholder="Snorlax Defense" size=12/>  
-		<input id="snorlax_spdef" type="text" placeholder="Snorlax Sp.Def" size=12/>  
+		<input id="gyara_hp" type="text" placeholder="ギャラHP" size=12/> 
+		<input id="gyara_max_hp" type="text" placeholder="ギャラ最大HP" size=12/> 
+		<input id="snorlax_hp" type="text" placeholder="カビゴンHP" size=8/> 
+		<input id="snorlax_def" type="text" placeholder="カビゴンB" size=12/>  
+		<input id="snorlax_spdef" type="text" placeholder="カビゴンD" size=12/>  
 	</span>
-	<button onclick=red()> Calculate </button>
+	<button onclick=red()> 計算 </button>
 	<br> 
 	<p id="red_strats"> </p>
 
