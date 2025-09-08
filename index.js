@@ -65,26 +65,30 @@ function parseSyntax(data, stat, level, name) {
 	return `${name}: ${s} <br>`
 }
 
-function parseHTML() {
-	for (let [name, mon] of Object.entries(stats)) {
-		var output = ''
-		var spans = Array.from(document.querySelectorAll(`.${name.toString()} input`).entries())
-		var level = parseInt(document.getElementById("level").value)
+function parseHTML(calc_ivs) {
+	if (calc_ivs) {
+		for (let [name, mon] of Object.entries(stats)) {
+			var output = ''
+			var spans = Array.from(document.querySelectorAll(`.${name.toString()} input`).entries())
+			var level = parseInt(document.getElementById("level").value)
 
-		for (var i = 2; i < 7; i++) {
-			if (spans[i] == undefined) {
-				continue 
-			}
+			for (var i = 2; i < 7; i++) {
+				if (spans[i] == undefined) {
+					continue 
+				}
 
-			res = parseStat(parseInt(spans[i][1].value), mon[i-1], level, -1, i==0)
-			if (res != undefined) {
-				output += parseSyntax(res, spans[i][1].value, level, names[i-1])
+				res = parseStat(parseInt(spans[i][1].value), mon[i-1], level, -1, i==0)
+				if (res != undefined) {
+					output += parseSyntax(res, spans[i][1].value, level, names[i-1])
+				}
 			}
-			if (!Number.isNaN(parseInt(spans[0][1].value))) {
-				document.getElementById("flail").innerHTML = flailHP(parseInt(spans[0][1].value));
-			}
+			document.getElementById("results").innerHTML = output;
 		}
-		document.getElementById("results").innerHTML = output;
+	} else {
+		let hp = parseInt(document.getElementById("hp").value);
+		if (!Number.isNaN(hp)) {
+			document.getElementById("flail").innerHTML = flailHP(hp);
+		}
 	}
 }
 

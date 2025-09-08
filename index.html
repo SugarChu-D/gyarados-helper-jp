@@ -6,10 +6,10 @@
 </head>
 <body style="font-family: verdana; font-size: 14px;">
 	<h1>HGSS Glitchless Manipless RTA補助ツール</h1>
-	<h3> ギャラドス個体値特定 </h3>
 		<!-- lol kill me -->
 
 	<span class="gyarados">
+		<h3> ギャラドス個体値特定(故障中) </h3>
 		<input style="text-align: center" type="text" id="level" value="52" size=1 />
 		<input type="text" placeholder="A" size=4/>  
 		<input type="text" placeholder="B" size=4/>  
@@ -17,12 +17,7 @@
 		<input type="text" placeholder="D" size=4/>  
 		<input type="text" placeholder="S" size=4/>  
 		<button onclick=parseHTML(true)> 個体値計算 </button>
-		<h3> じたばた計算 </h3>
-		<button id="hp_down" onclick="document.getElementById('hp').value = parseInt(document.getElementById('hp').value) - 1;parseHTML(false)"> - </button>
-		<input id="hp" type="text" placeholder="HP" size=4 value=168 onchange="parseHTML(false)"> 
-		<button id="hp_up" onclick="document.getElementById('hp').value = parseInt(document.getElementById('hp').value) + 1;parseHTML(false)"> + </button>
-		<p id="flail"> </p>
-<!-- 
+		<!-- 
 		<select name="positive">
 			<option> Neutral </option>
 			<option> Attack </option>
@@ -41,6 +36,14 @@
 		</select>
  -->
 		<p id="results"> </p>
+	</span>
+	<br>
+	<span class="flail">
+		<h3> じたばた計算 </h3>
+		<button id="hp_down" onclick="document.getElementById('hp').value = parseInt(document.getElementById('hp').value) - 1;parseHTML(false)"> - </button>
+		<input id="hp" type="text" placeholder="HP" size=4 value=168 onchange="parseHTML(false)"> 
+		<button id="hp_up" onclick="document.getElementById('hp').value = parseInt(document.getElementById('hp').value) + 1;parseHTML(false)"> + </button>
+		<p id="flail"> </p>
 	</span>
 	<br>
 
