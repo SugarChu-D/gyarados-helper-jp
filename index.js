@@ -199,7 +199,7 @@ function red() {
 	var output = ''
 
 
-	output += `Case 3: ${case3} (${case3 >= 141}), case 4: ${case4} (${case4 >= 157}), case 5: ${case5} (${case5 >= 186}) </br> </br>`
+	output += `パターン3: ${case3} (${case3 >= 141}), パターン4: ${case4} (${case4 >= 157}), パターン5: ${case5} (${case5 >= 186}) </br> </br>`
 
 	if (gyaraHP <= 80) {
 		output += "ギャラドスのHPを117以上に回復してください </br> </br>"
